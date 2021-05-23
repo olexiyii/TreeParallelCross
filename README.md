@@ -1,8 +1,8 @@
 # TreeParallelCross
-Tree parallel cross utility
-The utility package can be most helpful in case Source tree is slow system with redusing performance along using.
+<p>Tree parallel cross utility</p>
+<p>The utility package can be most helpful in case Source tree is slow system with redusing performance along using.</p>
 
-The <b>test</b> folder contains example
+<p>The <b>test</b> folder contains example</p>
 
 For using should implements <b>ITree</b> and initializing FunctionalInterface <b>ITreeNodeConverter</b>
 
