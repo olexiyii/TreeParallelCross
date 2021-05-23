@@ -2,7 +2,7 @@
 Tree parallel cross utility
 The utility package can be most helpful in case Source tree is slow system with redusing performance along using.
 
-The "test" folder contains example
+The <b>test</b> folder contains example
 
 For using should implements "ITree" and initializing FunctionalInterface "ITreeNodeConverter"
 
