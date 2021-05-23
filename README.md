@@ -27,11 +27,13 @@ YamlNodeTest rootResult = ParallelCross.<TreeImpl, ITreeNodeConverter, YamlNodeT
             </p>
 <li>
 YamlNodeTest - the class of source tree node</li>
-TreeImpl - implements "ITree"
-ITreeNodeConverter- (ITreeNodeConverter<YamlNodeTest>) (parentNodeSrc, index, childNodeSrc) -> {
+<li>TreeImpl - implements "ITree"/li>
+<li>ITreeNodeConverter- (ITreeNodeConverter<YamlNodeTest>) (parentNodeSrc, index, childNodeSrc) -> {
                         parentNodeSrc.itemChildren.set(index, childNodeSrc);
-                    }
-parallelism - if (parallelism <= 0) {
+                    }/li>
+<li>parallelism - if (parallelism <= 0) {
             parallelism = Runtime.getRuntime().availableProcessors() - 1;
-        }
-threadTimeout,timeUnit - time limit for each thread, in current version interrupted threads became a looses of data :(
+        }/li>
+<li>threadTimeout,timeUnit - time limit for each thread/li>
+
+            <p>in current version interrupted threads became a looses of data :(</p>
