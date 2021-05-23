@@ -4,26 +4,25 @@ The utility package can be most helpful in case Source tree is slow system with 
 
 The <b>test</b> folder contains example
 
-For using should implements "ITree" and initializing FunctionalInterface "ITreeNodeConverter"
+For using should implements <b>ITree</b> and initializing FunctionalInterface <b>ITreeNodeConverter</b>
 
 Call ParallelCross.doCross:
-"public static <T extends ITree, Y extends ITreeNodeConverter, R> R doCross(
+<code>public static <T extends ITree, Y extends ITreeNodeConverter, R> R doCross(
             Class<T> treeClass
             , Y treeConverterFunc
             , int parallelism
             , long threadTimeout
-            , TimeUnit timeUnit) throws IllegalAccessException, InstantiationException {
-" 
+            , TimeUnit timeUnit) throws IllegalAccessException, InstantiationException </code>
 
 like in "ParallelCrossTest":
-
+<code>
 YamlNodeTest rootResult = ParallelCross.<TreeImpl, ITreeNodeConverter, YamlNodeTest>doCross(
                     TreeImpl.class
                     , (ITreeNodeConverter<YamlNodeTest>) (parentNodeSrc, index, childNodeSrc) -> {
                         parentNodeSrc.itemChildren.set(index, childNodeSrc);
                     }
                     , -1, 5, TimeUnit.MINUTES);
-                    
+                    </code>
 YamlNodeTest - the class of source tree node
 TreeImpl - implements "ITree"
 ITreeNodeConverter- (ITreeNodeConverter<YamlNodeTest>) (parentNodeSrc, index, childNodeSrc) -> {
